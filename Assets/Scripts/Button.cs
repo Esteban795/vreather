@@ -27,7 +27,7 @@ public class Button : MonoBehaviour
         onClick.Invoke();
     }
     
-    IEnumerator AnimateButton()
+    public IEnumerator AnimateButton()
     {
         isBusy = true;
         Vector3 targetPosition = initialPosition + pushOffset;
@@ -40,7 +40,6 @@ public class Button : MonoBehaviour
             yield return null; // Attend la frame suivante
         }
         
-        onClick.Invoke();
         
         yield return new WaitForSeconds(0.1f);
         t = 0;
@@ -52,5 +51,10 @@ public class Button : MonoBehaviour
         }
         transform.localPosition = initialPosition;
         isBusy = false;
+    }
+
+    public void StartAnimation()
+    {
+        StartCoroutine(AnimateButton());
     }
 }
