@@ -5088,6 +5088,7 @@ MonoBehaviour:
         m_CallState: 2
   pushOffset: {x: 0, y: 0, z: 0.05}
   speed: 10
+  clickSound: {fileID: 8300000, guid: 180401c06a64e284d94ef290fe584e12, type: 3}
 --- !u!114 &1815708572
 MonoBehaviour:
   m_ObjectHideFlags: 0

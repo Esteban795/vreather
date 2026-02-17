@@ -13,15 +13,24 @@ public class Button : MonoBehaviour
 
     private Vector3 initialPosition;
     private bool isBusy = false;
-
+    
+    [Header("Audio")]
+    public AudioClip clickSound;
+    
+    private AudioSource audioSource;
     void Start()
     {
         initialPosition = transform.localPosition;
+        audioSource = GetComponent<AudioSource>();
     }
     
     public void Interact()
     {
         if (isBusy) return; // Si déjà en train de bouger, on ignore
+        if (clickSound != null)
+        {
+            audioSource.PlayOneShot(clickSound);
+        }
         StartCoroutine(AnimateButton());
         Debug.Log("Bouton appuyé !");
         onClick.Invoke();
