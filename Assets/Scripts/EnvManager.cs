@@ -4,6 +4,10 @@ public class EnvManager : MonoBehaviour
 {
     [Header("Environments")]
     public GameObject[] environments;
+
+    [Header("Connexion")]
+    public WeatherManager weatherManager;
+    
     private int currentIndex = 0;
 
     void Start()
@@ -21,6 +25,17 @@ public class EnvManager : MonoBehaviour
         environments[currentIndex].SetActive(false);
         currentIndex = (currentIndex + 1) % environments.Length;
         environments[currentIndex].SetActive(true);
-        Debug.Log("Nouvel environnement activé : " + environments[currentIndex].name);
+        if (weatherManager != null)
+        {
+            EnvironmentData data = environments[currentIndex].GetComponent<EnvironmentData>();
+            if (data != null)
+            {
+                weatherManager.treeMaterial = data.treeMaterial;
+                weatherManager.staticMaterial = data.staticMaterial;
+                weatherManager.summerPalette = data.normalPalette; 
+                weatherManager.winterPalette = data.winterPalette;
+                weatherManager.RefreshTextures();
+            }
+        }
     }
 }

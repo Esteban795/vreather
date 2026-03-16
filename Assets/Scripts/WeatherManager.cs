@@ -56,6 +56,7 @@ public class WeatherManager : MonoBehaviour
     private string apiKey;
     private double latitude = 48.42822;
     private double longitude = -71.0622;
+    private int currentWeatherId = 800;
     public WeatherUI weatherUI;
     
     [Header("Precise Weather Profiles")]
@@ -124,7 +125,9 @@ private void ApplyWeatherToEnvironment(CurrentData current)
     {
         if (current.weather == null || current.weather.Count == 0) return;
 
-        int weatherId = current.weather[0].id;
+        currentWeatherId = current.weather[0].id;
+        int weatherId = 621;
+        currentWeatherId = weatherId;
         WeatherMakerProfileScript targetProfile = clear; 
 
         // 200s: Thunderstorms
@@ -172,43 +175,7 @@ private void ApplyWeatherToEnvironment(CurrentData current)
             
             Debug.Log($"Weather applied (ID {weatherId}, Wind: {current.wind_speed}m/s) -> Profile: {targetProfile.name}");
         }
-        
-        // --- Texture matching current weather ---
-        if (treeMaterial != null && staticMaterial !=null && summerPalette != null && winterPalette != null)
-        {
-            // Ice
-            if (weatherId == 511 || (weatherId >= 611 && weatherId <= 616))
-            {
-                treeMaterial.SetTexture("_MainTex", winterPalette);
-                staticMaterial.SetTexture("_BaseMap", winterPalette);
-                treeMaterial.SetFloat("_Smoothness", 0.8f);
-                staticMaterial.SetFloat("_Smoothness", 0.8f);
-            }
-            // Snow
-            else if (weatherId >= 600 && weatherId < 700) 
-            {
-                treeMaterial.SetTexture("_MainTex", winterPalette);
-                staticMaterial.SetTexture("_BaseMap", winterPalette);
-                treeMaterial.SetFloat("_Smoothness", 0.0f);
-                staticMaterial.SetFloat("_Smoothness", 0.0f);
-            }
-            // Rain
-            else if (weatherId >= 200 && weatherId < 600)
-            {
-                treeMaterial.SetTexture("_MainTex", summerPalette);
-                staticMaterial.SetTexture("_BaseMap", summerPalette);
-                treeMaterial.SetFloat("_Smoothness", 0.8f);
-                staticMaterial.SetFloat("_Smoothness", 0.8f);
-            }
-            // Dry
-            else
-            {
-                treeMaterial.SetTexture("_MainTex", summerPalette);
-                staticMaterial.SetTexture("_BaseMap", summerPalette);
-                treeMaterial.SetFloat("_Smoothness", 0.0f);
-                staticMaterial.SetFloat("_Smoothness", 0.0f);
-            }
-        }
+        RefreshTextures();
     }
 
 private void SynchronizeEnvironment(OneCallData data)
@@ -247,6 +214,45 @@ private void SynchronizeEnvironment(OneCallData data)
             }
 
             Debug.Log($"Vent synchronisé : {current.wind_speed} m/s (Multiplicateur : {windIntensity})");
+        }
+    }
+
+    public void RefreshTextures()
+    {
+        if (treeMaterial != null && staticMaterial != null && summerPalette != null && winterPalette != null)
+        {
+            // Ice (511 + 61x)
+            if (currentWeatherId == 511 || (currentWeatherId >= 611 && currentWeatherId <= 616))
+            {
+                treeMaterial.SetTexture("_MainTex", winterPalette);
+                staticMaterial.SetTexture("_BaseMap", winterPalette);
+                treeMaterial.SetFloat("_Glossiness", 0.8f);
+                staticMaterial.SetFloat("_Smoothness", 0.8f);
+            }
+            // Snow (6XX)
+            else if (currentWeatherId >= 600 && currentWeatherId < 700) 
+            {
+                treeMaterial.SetTexture("_MainTex", winterPalette);
+                staticMaterial.SetTexture("_BaseMap", winterPalette);
+                treeMaterial.SetFloat("_Glossiness", 0.0f);
+                staticMaterial.SetFloat("_Smoothness", 0.0f);
+            }
+            // Rain (200 to 599)
+            else if (currentWeatherId >= 200 && currentWeatherId < 600)
+            {
+                treeMaterial.SetTexture("_MainTex", summerPalette);
+                staticMaterial.SetTexture("_BaseMap", summerPalette);
+                treeMaterial.SetFloat("_Glossiness", 0.8f);
+                staticMaterial.SetFloat("_Smoothness", 0.8f);
+            }
+            // Dry
+            else
+            {
+                treeMaterial.SetTexture("_MainTex", summerPalette);
+                staticMaterial.SetTexture("_BaseMap", summerPalette);
+                treeMaterial.SetFloat("_Glossiness", 0.0f);
+                staticMaterial.SetFloat("_Smoothness", 0.0f);
+            }
         }
     }
     
