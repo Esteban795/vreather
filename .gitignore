@@ -99,3 +99,4 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 /Assets/StreamingAssets/config.json
+/Assets/StreamingAssets/config.json.meta
