@@ -101,7 +101,7 @@ public class WeatherManager : MonoBehaviour
     
     IEnumerator GetOneCallWeather(double latitude, double longitude)
     {
-        string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={latitude}&lon={longitude}&units=metric&appid={apiKey}";
+        string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={latitude}&lon={longitude}&units=metric&appid={apiKey}&lang=fr";
 
         using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
