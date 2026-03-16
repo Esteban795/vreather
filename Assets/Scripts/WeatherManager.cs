@@ -126,8 +126,10 @@ private void ApplyWeatherToEnvironment(CurrentData current)
         if (current.weather == null || current.weather.Count == 0) return;
 
         currentWeatherId = current.weather[0].id;
-        int weatherId = 621;
-        currentWeatherId = weatherId;
+        int weatherId = currentWeatherId;
+        // Debug
+        //int weatherId = 711;
+        //currentWeatherId = weatherId;
         WeatherMakerProfileScript targetProfile = clear; 
 
         // 200s: Thunderstorms

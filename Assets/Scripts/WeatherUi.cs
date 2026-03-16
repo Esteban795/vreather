@@ -11,6 +11,7 @@ public class WeatherUI : MonoBehaviour
     public TextMeshProUGUI tempText;
     public TextMeshProUGUI descText;
     public TextMeshProUGUI humidityText;
+    public TextMeshProUGUI windText;
     public TextMeshProUGUI FeelsLikeText;
 
     private bool isVisible = false;
@@ -26,6 +27,7 @@ public class WeatherUI : MonoBehaviour
         descText.text = data.current.weather[0].description;
         humidityText.text = $"Humidité: {data.current.humidity}%";
         FeelsLikeText.text = $"Ressenti : {Mathf.RoundToInt(data.current.feels_like)}°C";
+        windText.text = $"Vent : {data.current.wind_speed}m/s";
     }
 
     public void toggleVisibility()
