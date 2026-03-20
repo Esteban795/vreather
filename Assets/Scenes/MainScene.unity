@@ -6695,27 +6695,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4344173008124332, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalScale.x
-      value: 153564.03
+      value: 4131.963
       objectReference: {fileID: 0}
     - target: {fileID: 4344173008124332, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalScale.y
-      value: 153564.03
+      value: 4131.963
       objectReference: {fileID: 0}
     - target: {fileID: 4344173008124332, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalScale.z
-      value: 153564.03
+      value: 4131.963
       objectReference: {fileID: 0}
     - target: {fileID: 4344173008124332, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16401.674
+      value: -434.1057
       objectReference: {fileID: 0}
     - target: {fileID: 4344173008124332, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 83407.375
+      value: 2249.275
       objectReference: {fileID: 0}
     - target: {fileID: 4344173008124332, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88696.17
+      value: 2393.8237
       objectReference: {fileID: 0}
     - target: {fileID: 4424888995834786, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6759,27 +6759,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675549860175304, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12285.122
+      value: 330.55704
       objectReference: {fileID: 0}
     - target: {fileID: 4675549860175304, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalScale.y
-      value: 12285.122
+      value: 330.55704
       objectReference: {fileID: 0}
     - target: {fileID: 4675549860175304, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalScale.z
-      value: 12285.122
+      value: 330.55704
       objectReference: {fileID: 0}
     - target: {fileID: 4675549860175304, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 115826.734
+      value: 3123.7773
       objectReference: {fileID: 0}
     - target: {fileID: 4675549860175304, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -197012.95
+      value: -5296.0225
       objectReference: {fileID: 0}
     - target: {fileID: 4675549860175304, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -186284.33
+      value: -5005.1045
       objectReference: {fileID: 0}
     - target: {fileID: 33126925066286578, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 3}
       propertyPath: m_Mesh
@@ -6844,18 +6844,18 @@ MonoBehaviour:
   clearWindy: {fileID: 11400000, guid: 69861e4a21b5ff6429e83378a99abf16, type: 2}
   lightClouds: {fileID: 11400000, guid: 3a98a40415376694cb6047ba45ff1c79, type: 2}
   mediumClouds: {fileID: 11400000, guid: 3e440d0af0f82f943aba087c8f5c0d4b, type: 2}
-  overcastClouds: {fileID: 11400000, guid: b996a85a65018db4d86c0610303c0c7e, type: 2}
+  overcastClouds: {fileID: 11400000, guid: 550a0c4dc55eb26468e0b35e4d4954ab, type: 2}
   lightRain: {fileID: 11400000, guid: 8202f2e2b58652941b22149cde8c8080, type: 2}
   mediumRain: {fileID: 11400000, guid: 985271bd39ee46a4eb5cdefa70777234, type: 2}
   heavyRain: {fileID: 11400000, guid: ed4d56f831f48144d999acb279d49079, type: 2}
   storm: {fileID: 11400000, guid: e6ee3c3c3c03f144bad8da0e89f1d127, type: 2}
   lightSnow: {fileID: 11400000, guid: 3e29f59dfb5a2224db01bd082f3e05e0, type: 2}
   mediumSnow: {fileID: 11400000, guid: f8a60c0b27312514a8a49b67f5243644, type: 2}
-  heavySnow: {fileID: 0}
+  heavySnow: {fileID: 11400000, guid: 40fea3ae04b51b74e90ecbc9dd765278, type: 2}
   blizzard: {fileID: 11400000, guid: b996a85a65018db4d86c0610303c0c7e, type: 2}
-  lightSleet: {fileID: 0}
-  mediumSleet: {fileID: 0}
-  heavySleet: {fileID: 0}
+  lightSleet: {fileID: 11400000, guid: c2dbae63e206bc44681cc79c9a1f8ae0, type: 2}
+  mediumSleet: {fileID: 11400000, guid: 84e5ec6707d08c443b5e735b9a057614, type: 2}
+  heavySleet: {fileID: 11400000, guid: 587fdd5e2f54a5148bdf1e230b75733a, type: 2}
   mediumFog: {fileID: 11400000, guid: 007d9f804c638d64eac3a6a578ec77b0, type: 2}
   sandstorm: {fileID: 11400000, guid: 0204b78ea2f40d34dbcd413cfa121096, type: 2}
   smoky: {fileID: 11400000, guid: ead9cbc2dfea7b94295accb52f3e6916, type: 2}
@@ -7502,6 +7502,10 @@ PrefabInstance:
     - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_Name
       value: XR Interaction Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_LocalPosition.x

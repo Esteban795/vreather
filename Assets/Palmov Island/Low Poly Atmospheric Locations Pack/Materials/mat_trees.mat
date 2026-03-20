@@ -44,9 +44,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Glossiness: 0
-    - _MBAmplitude: 3.9433334
-    - _MBFrequency: 0.78866667
-    - _MBWindDir: 90
+    - _MBAmplitude: 0.8566666
+    - _MBFrequency: 0.17133333
+    - _MBWindDir: 60
     - _Smoothness: 0
     m_Colors:
     - _NoiseTextureTilling: {r: 1, g: 1, b: 1, a: 1}
