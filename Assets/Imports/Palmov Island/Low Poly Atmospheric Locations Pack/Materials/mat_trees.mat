@@ -46,7 +46,7 @@ Material:
     - _Glossiness: 0
     - _MBAmplitude: 1.03
     - _MBFrequency: 0.206
-    - _MBWindDir: 50
+    - _MBWindDir: 80
     - _Smoothness: 0
     m_Colors:
     - _NoiseTextureTilling: {r: 1, g: 1, b: 1, a: 1}
